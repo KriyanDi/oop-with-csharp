@@ -1,0 +1,32 @@
+﻿<CodeSnippets
+xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        IFE
+      </Title>
+      <Shortcut>
+        ife
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[if ($Condition$)
+            {
+              //Code Here:
+            }
+            else
+            {
+              //Code Here:
+            }$end$]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>Condition</ID>
+          <Default>true</Default>
+          <ToolTip>Enter the condition you want to be checked</ToolTip>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

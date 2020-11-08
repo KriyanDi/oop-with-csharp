@@ -1,0 +1,58 @@
+﻿<CodeSnippets
+xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        REGIONS BASIC
+      </Title>
+      <Shortcut>
+        rgnbsc
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[#region Constant Fields
+            #region public
+
+            #endregion
+
+            #region private
+
+            #endregion
+            #endregion
+
+            #region Fields
+            #region public
+
+            #endregion
+
+            #region private
+
+            #endregion
+            #endregion
+
+            #region Constructors
+
+            #endregion
+
+            #region Destructors
+
+            #endregion
+
+            #region Properties
+
+            #endregion
+
+            #region Methods
+            #region public
+
+            #endregion
+
+            #region private
+
+            #endregion
+            #endregion$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
