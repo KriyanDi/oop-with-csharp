@@ -41,7 +41,6 @@ namespace Ex2
             else
             {
                 Console.WriteLine("No");
-
             }
 
             //while
