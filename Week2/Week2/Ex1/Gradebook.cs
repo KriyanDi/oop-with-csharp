@@ -8,16 +8,6 @@ namespace Ex1
 {
     public class Gradebook
     {
-        #region Constant Fields
-        #region public
-
-        #endregion
-
-        #region private
-
-        #endregion
-        #endregion
-
         #region Fields
         #region public
 
@@ -30,14 +20,10 @@ namespace Ex1
         #endregion
 
         #region Constructors
-
-        #endregion
         public Gradebook(string name)
         {
             CourseName = name;
         }
-
-        #region Destructors
 
         #endregion
 
@@ -62,6 +48,5 @@ namespace Ex1
 
         #endregion
         #endregion
-
     }
 }

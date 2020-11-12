@@ -62,20 +62,17 @@ namespace Prob3
 
         #region Methods
         #region public
-
-        #endregion
-
-        #region private
-
-        #endregion
-
-        #endregion
-
         public decimal GetInvoiceAmount()
         {
             decimal result = quantity * pricePerItem;
 
             return result;
         }
+        #endregion
+
+        #region private
+
+        #endregion
+        #endregion
     }
 }

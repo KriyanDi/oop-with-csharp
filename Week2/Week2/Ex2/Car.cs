@@ -8,11 +8,37 @@ namespace Ex2
 {
     class Car
     {
+        #region Constant Fields
+        #region public
+        public enum CarBrands { FIAT, OPEL, BMW, SKODA };
+        #endregion
+
+        #region private
+
+        #endregion
+        #endregion
+
+        #region Fields
+        #region public
+
+        #endregion
+
+        #region private
         private int horsePower;
         private CarBrands brand;
 
-        public enum CarBrands{FIAT, OPEL, BMW, SKODA};
+        #endregion
+        #endregion
 
+        #region Constructors
+        public Car(int horsePower)
+        {
+            HorsePower = horsePower;
+        }
+
+        #endregion
+
+        #region Properties
         public int HorsePower
         {
             get { return horsePower; }
@@ -25,12 +51,6 @@ namespace Ex2
             set { brand = value; }
         }
 
-
-        public Car(int horsePower)
-        {
-            HorsePower = horsePower;
-        }
-
-
+        #endregion
     }
 }

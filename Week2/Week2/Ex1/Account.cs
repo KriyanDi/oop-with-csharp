@@ -8,16 +8,6 @@ namespace Ex1
 {
     class Account
     {
-        #region Constant Fields
-        #region public
-
-        #endregion
-
-        #region private
-
-        #endregion
-        #endregion
-
         #region Fields
         #region public
 
@@ -34,10 +24,6 @@ namespace Ex1
         {
             Balance = initialBalance;
         }
-
-        #endregion
-
-        #region Destructors
 
         #endregion
 
