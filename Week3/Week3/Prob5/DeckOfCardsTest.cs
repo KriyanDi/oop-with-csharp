@@ -7,95 +7,131 @@ namespace Prob5
 {
     public class DeckOfCardsTest
     {
-        public DeckOfCardsTest()
+        static private void RandomHandTest()
         {
-            DeckOfCards myDeckOfCards = new DeckOfCards();
-
-            Console.WriteLine("Test:");
-
-            //Random hand
             Console.WriteLine("Random hand:");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] hand = myDeckOfCards.DealFiveCards();
             myDeckOfCards.PrintHand(hand);
 
             Console.WriteLine();
-
-            //Sort hand
+        }
+        static private void SortHandTest()
+        {
             Console.WriteLine("SortHand:");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handUnsorted = myDeckOfCards.DealFiveCards();
             myDeckOfCards.PrintHand(handUnsorted);
             myDeckOfCards.SortHand(handUnsorted);
             myDeckOfCards.PrintHand(handUnsorted);
 
             Console.WriteLine();
-            //pair
+        }
+        static private void IsTestedHandDesiredType(bool isItDesiredType)
+        {
+            if (isItDesiredType)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
+            }
+        }
+        static private void IsHandPairTest()
+        {
             Console.Write("Pair: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handPair = { new Card("Three", "Hearts"),
                                 new Card("Eight", "Diamonds"),
                                 new Card("Ace", "Clubs"),
                                 new Card("Six", "Clubs"),
                                 new Card("Ace", "Spades")};
-            if (myDeckOfCards.IsPair(handPair)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            //two pair
+            IsTestedHandDesiredType(myDeckOfCards.IsPair(handPair));
+        }
+        static private void IsHandTwoPairTest()
+        {
             Console.Write("Two Pair: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handTwoPair = { new Card("Three", "Hearts"),
                                    new Card("Eight", "Diamonds"),
                                    new Card("Ace", "Clubs"),
                                    new Card("Eight", "Clubs"),
                                    new Card("Three", "Spades")};
-            if (myDeckOfCards.IsTwoPair(handTwoPair)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            //three of a kind
+            IsTestedHandDesiredType(myDeckOfCards.IsTwoPair(handTwoPair));
+        }
+        static private void IsHandThreeOfAKindTest()
+        {
             Console.Write("Three of a kind: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handThreeOfAKind = { new Card("Three", "Hearts"),
                                         new Card("Eight", "Diamonds"),
                                         new Card("Three", "Clubs"),
                                         new Card("Six", "Clubs"),
                                         new Card("Three", "Spades")};
-            if (myDeckOfCards.IsThreeOfAKind(handThreeOfAKind)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            //four of a kind
-            Console.Write("Four of a kind: ");
-            Card[] handFourOfAKind = { new Card("Ace", "Hearts"),
-                                       new Card("Eight", "Diamonds"),
-                                       new Card("Ace", "Clubs"),
-                                       new Card("Ace", "Diamonds"),
-                                       new Card("Ace", "Spades")};
-            if (myDeckOfCards.IsFourOfAKind(handFourOfAKind)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
-
-            //flush
+            IsTestedHandDesiredType(myDeckOfCards.IsThreeOfAKind(handThreeOfAKind));
+        }
+        static private void IsHandFlushTest()
+        {
             Console.Write("Flush: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handFlush = { new Card("King", "Hearts"),
                                  new Card("Ten", "Hearts"),
                                  new Card("Eight", "Hearts"),
                                  new Card("Seven", "Hearts"),
                                  new Card("Jack", "Hearts")};
-            if (myDeckOfCards.IsFlush(handFlush)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            //straight
+            IsTestedHandDesiredType(myDeckOfCards.IsFlush(handFlush));
+        }
+        static private void IsHandStraightTest()
+        {
             Console.Write("Straight: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handStraight = { new Card("Nine", "Hearts"),
                                     new Card("Ten", "Hearts"),
                                     new Card("King", "Hearts"),
                                     new Card("Queen", "Hearts"),
                                     new Card("Jack", "Hearts")};
-            if (myDeckOfCards.IsStraight(handStraight)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            //full house
+            IsTestedHandDesiredType(myDeckOfCards.IsStraight(handStraight));
+        }
+        static private void IsHandFullHouseTest()
+        {
             Console.Write("Full house: ");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             Card[] handFullHouse = { new Card("Nine", "Hearts"),
                                     new Card("Ten", "Hearts"),
                                     new Card("Ten", "Clubs"),
                                     new Card("Nine", "Diamonds"),
                                     new Card("Nine", "Clubs")};
-            if (myDeckOfCards.IsFullHouse(handFullHouse)) { Console.WriteLine("Yes"); } else { Console.WriteLine("No"); }
 
-            Console.WriteLine();
-
-            //Game rounds
+            IsTestedHandDesiredType(myDeckOfCards.IsFullHouse(handFullHouse));
+        }
+        static private void GameRoundsTest()
+        {
             Console.WriteLine("Game rounds:");
+            DeckOfCards myDeckOfCards = new DeckOfCards();
             myDeckOfCards.totalHand();
+        }
+
+        public DeckOfCardsTest()
+        {
+            Console.WriteLine("Test:");
+
+            RandomHandTest();
+            SortHandTest();
+
+            IsHandPairTest();
+            IsHandTwoPairTest();
+            IsHandThreeOfAKindTest();
+            IsHandFlushTest();
+            IsHandStraightTest();
+            IsHandFullHouseTest();
+
+            GameRoundsTest();
         }
     }
 }
