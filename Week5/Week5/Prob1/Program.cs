@@ -55,10 +55,10 @@ namespace Prob1
             DisplayInvoiceResult(GroupByPriceBelowAbove(listOfInvoices, 12), "Show items above and below 12$:"); //f)
 
             Console.WriteLine("Group and subgroups by letter:"); //g)
-            char letter;
+            
             for (int i = 0; i < 26; i++)
             {
-                letter = (char)(65 + i);
+                char letter = (char)(65 + i);
                 DisplayInvoiceResult(GroupByFirstLetter(listOfInvoices, letter.ToString()), $"Starts with letter {letter}");
             }
 
