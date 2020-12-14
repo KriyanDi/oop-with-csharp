@@ -47,11 +47,11 @@ namespace Prob1
 
         static void Main(string[] args)
         {
-            DisplayInvoiceResult(sortByPartDescription(listOfInvoices), "Sort by PartDescription:"); //a)
-            DisplayInvoiceResult(sortByPrice(listOfInvoices), "Sort by Price:"); //b)
-            DisplayInvoiceResult(sortByQuantityPartDescriptionAndQuantity(listOfInvoices), "Sort by Quantity:"); //c)
-            DisplayInvoiceResult(sortByTotalPrice(listOfInvoices), "Sort by Total price:"); //d)
-            DisplayInvoiceResult(totalPriceRange200To500(listOfInvoices), "Show 200$ to 500$:"); //e)
+            DisplayInvoiceResult(SortByPartDescription(listOfInvoices), "Sort by PartDescription:"); //a)
+            DisplayInvoiceResult(SortByPrice(listOfInvoices), "Sort by Price:"); //b)
+            DisplayInvoiceResult(SortByQuantityPartDescriptionAndQuantity(listOfInvoices), "Sort by Quantity:"); //c)
+            DisplayInvoiceResult(SortByTotalPrice(listOfInvoices), "Sort by Total price:"); //d)
+            DisplayInvoiceResult(TotalPriceRange200To500(listOfInvoices), "Show 200$ to 500$:"); //e)
             DisplayInvoiceResult(GroupByPriceBelowAbove(listOfInvoices, 12), "Show items above and below 12$:"); //f)
 
             Console.WriteLine("Group and subgroups by letter:"); //g)
@@ -67,7 +67,7 @@ namespace Prob1
 
         #region Methods
         //a)
-        private static IEnumerable<Invoice> sortByPartDescription(List<Invoice> listOfInvoices)
+        private static IEnumerable<Invoice> SortByPartDescription(List<Invoice> listOfInvoices)
         {
             IEnumerable<Invoice> result = listOfInvoices
                             .OrderBy(invoice => invoice.PartDescription)
@@ -83,7 +83,7 @@ namespace Prob1
         }
 
         //b)
-        private static IEnumerable<Invoice> sortByPrice(List<Invoice> listOfInvoices)
+        private static IEnumerable<Invoice> SortByPrice(List<Invoice> listOfInvoices)
         {
             IEnumerable<Invoice> result = listOfInvoices
                             .OrderBy(invoice => invoice.Price)
@@ -98,7 +98,7 @@ namespace Prob1
         }
 
         //c)
-        private static IEnumerable<(string PartDescription, int Quantity)> sortByQuantityPartDescriptionAndQuantity(List<Invoice> listOfInvoices)
+        private static IEnumerable<(string PartDescription, int Quantity)> SortByQuantityPartDescriptionAndQuantity(List<Invoice> listOfInvoices)
         {
             IEnumerable<(string PartDescription, int Quantity)> result = listOfInvoices
                             .OrderBy(invoice => invoice.Quantity)
@@ -113,7 +113,7 @@ namespace Prob1
         }
 
         //d)
-        private static IEnumerable<(string PartDescription, decimal InvoiceTotal)> sortByTotalPrice(List<Invoice> listOfInvoices)
+        private static IEnumerable<(string PartDescription, decimal InvoiceTotal)> SortByTotalPrice(List<Invoice> listOfInvoices)
         {
             IEnumerable<(string PartDescription, decimal InvoiceTotal)> result = listOfInvoices
                 .OrderBy(invoice => invoice.Quantity * invoice.Price)
@@ -129,9 +129,9 @@ namespace Prob1
         }
 
         //e)
-        private static IEnumerable<decimal> totalPriceRange200To500(List<Invoice> listOfInvoices)
+        private static IEnumerable<decimal> TotalPriceRange200To500(List<Invoice> listOfInvoices)
         {
-            IEnumerable<decimal> result = sortByTotalPrice(listOfInvoices)
+            IEnumerable<decimal> result = SortByTotalPrice(listOfInvoices)
                .Where(invoice => (200 <= invoice.InvoiceTotal && invoice.InvoiceTotal <= 500))
                .Select(invoice => invoice.InvoiceTotal);
 
