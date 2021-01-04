@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HomeworkTask2.CountDownOverride">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>CountDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HomeworkTask2.IEnumerator">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="HomeworkTask2.IEnumerator.CountDown" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>IEnumerator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAACAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>IEnumerator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

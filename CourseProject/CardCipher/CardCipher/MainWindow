@@ -1,0 +1,103 @@
+﻿<Window x:Class="CardCipher.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:CardCipher"
+        mc:Ignorable="d"
+        Title="CardCipher-Login Page" Height="330" Width="550" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanMinimize">
+    <!--Background-->
+    <Window.Background>
+        <LinearGradientBrush EndPoint="1.00, 0.178" StartPoint="-0.049,1.213">
+            <GradientStop Color="#FF000851"/>
+            <GradientStop Color="#FF1CB5E0" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <StackPanel>
+        <!--Logo-->
+        <Image Margin="428,20,24,0" Source="Group 3.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" Width="92"/>
+        
+        <!--Exit Button-->
+        <Button x:Name="BtnExit" Height="24" Content="x" Margin="25,-115,470.4,0" FontSize="16" FontWeight="Medium" FontFamily="Tahoma" BorderBrush="Transparent" Background="Transparent" Padding="0 0 35 0" Click="BtnExit_Click"/>
+
+        <!--LogIn Text Box-->
+        <TextBlock Text="Log In" FontFamily="Tahoma" FontSize="36" FontWeight="Medium" Foreground="White" Margin="60,0,0.4,0" Height="44">
+            <TextBlock.Effect>
+                <DropShadowEffect ShadowDepth="6" Direction="330" Color="Black" Opacity="0.25" BlurRadius="50"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <!--User/Password-->
+        <StackPanel Orientation="Vertical" Margin="60 55 40 0 ">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--User Text Icon-->
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" Margin="0 0 165 0 ">
+                        <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="White"/>
+                        <TextBlock Text="User" Foreground="White" FontSize="14" FontWeight="Medium" FontFamily="Tahoma" Margin="1 6 0 0">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="6" Direction="330" Color="Black" Opacity="0.25" BlurRadius="20"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!--Password Text Icon-->
+                    <StackPanel Orientation="Horizontal" Grid.Column="1">
+                        <materialDesign:PackIcon Kind="Lock" Width="22" Height="22" Foreground="White"/>
+                        <TextBlock Text="Password" Foreground="White" FontSize="14" FontWeight="Medium" FontFamily="Tahoma" Margin="1 6 0 0">
+                            <TextBlock.Effect>
+                                <DropShadowEffect ShadowDepth="6" Direction="330" Color="Black" Opacity="0.25" BlurRadius="20"/>
+                            </TextBlock.Effect>
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--User Input-->
+                    <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0 0 40 0">
+                        <Border Background="White">
+                            <TextBox x:Name="TxtUser" Foreground="Black" Padding="3 0 0 0"/>
+                        </Border>
+                    </StackPanel>
+
+
+                    <!--Password Input-->
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0 0 40 0">
+                        <Border Background="White">
+                            <PasswordBox x:Name="TxtPassword" Padding="3 0 0 0"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </StackPanel>
+
+        <!--LogIn Button-->
+        <StackPanel Orientation="Horizontal" Margin="0 25 0 0">
+            <Button x:Name="BtnLogIn" Width="80" Height="25" Margin="60,0,434,0" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="12" BorderBrush="#11E497" Background="#11E497" Foreground="White" Content="Log in" FontFamily="Tahoma" FontSize="12" Padding="0 0 0 1" Click="BtnLogIn_Click"/>
+        </StackPanel>
+
+        <!--SignUp Button-->
+        <StackPanel Orientation="Horizontal" Margin="35 5 0 0" Height="20">
+            <Button x:Name="BtnSignUp" Width="165" Height="19"  Content="Don't have an account? SignUp here." FontFamily="Tahoma" FontSize="8" Foreground="White" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="10 0 0 0" Click="BtnSignUp_Click"/>
+        </StackPanel>
+      <Frame x:Name="Login" />
+    </StackPanel>
+
+</Window>
