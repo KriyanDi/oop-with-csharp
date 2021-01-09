@@ -1,0 +1,80 @@
+﻿<Window x:Class="InvoiceProcesing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvoiceProcesing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="333" Width="439">
+
+    <!--Resources-->
+    <Window.Resources>
+        <!--Button Style-->
+        <Style x:Key="StlBtn">
+            <Setter Property="Button.Content" Value="SomeName"/>
+            
+        </Style>
+
+    </Window.Resources>
+    
+    <!--Main Stackpanel-->
+    <StackPanel Orientation="Vertical" Margin="10">
+        <!--Main Grid-->
+        <Grid>
+            <!--Rows-->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Controls Grid-->
+            <Grid Grid.Row="0">
+                <!--Cols-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Right Grid-->
+                <Grid Grid.Column="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <!--Buttons-->
+                        <Button x:Name="BtnCrtInvc" Content="Create Invoice" Grid.Row="0" Margin="30 15 30 15" Click="BtnCrtInvc_Click"/>
+                        <Button x:Name="BtnQuit" Content="Quit" Grid.Row="1" Margin="30 0 30 15" Click="BtnQuit_Click"/>
+
+                        <!--Lable Discount-->
+                        <TextBlock Text="Discount percent:" Grid.Row="2" VerticalAlignment="Center" Margin="30 0 0 10"/>
+                        <TextBox x:Name="TxtDisc" Grid.Row="2" Margin="130,0.2,30.4,15.4"/>
+                    </Grid>
+                </Grid>
+                
+                <!--Left Grid-->
+                <Grid Grid.Column="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Buttons-->
+                        <Button x:Name="BtnShwSrt"  Style="{StaticResource StlBtn}" Grid.Row="0" Margin="30 15 30 15" Click="BtnShwSrt_Click" RenderTransformOrigin="0.5,0.51"/>
+                        <Button x:Name="BtnGrpByPaymnt" Content="Group By Payment" Grid.Row="1" Margin="30 0 30 15" Click="BtnGrpByPaymnt_Click"/>
+                        <Button x:Name="BtnUpdDisc" Content="Update Discount" Grid.Row="2" Margin="30 0 30 15" Click="BtnUpdDisc_Click"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <!--Text-->
+            <StackPanel Orientation="Vertical" Grid.Row="1">
+                <TextBlock Text="Output results:"/>
+                <TextBox x:Name="TxtRslt" Height="130" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Window>

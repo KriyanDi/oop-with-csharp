@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        Button Definition
+      </Title>
+      <Shortcut>
+        btnbsc
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="XAML">
+        <![CDATA[<!--$Content$ Button-->
+                    <Button x:Name="Btn$Name$" Content="$Content$" Margin="$Margin$"$end$/>
+                    ]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>
+            Name
+          </ID>
+          <Default>Btn</Default>
+          <ToolTip>
+            Tell what is the name of button
+          </ToolTip>
+        </Literal>
+        <Literal>
+          <ID>
+            Content
+          </ID>
+          <Default>Button</Default>
+          <ToolTip>
+            Tell what is content of the button
+          </ToolTip>
+        </Literal>
+        <Literal>
+          <ID>
+            Margin
+          </ID>
+          <Default>0</Default>
+          <ToolTip>
+            Tell what is this button
+          </ToolTip>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
