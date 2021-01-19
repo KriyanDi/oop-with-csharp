@@ -120,7 +120,7 @@ namespace ClientRang
                 List<decimal> purchases = new List<decimal>();
                 for (int j = 0; j < sells; j++)
                 {
-                    purchases.Add((decimal)random.Next(100, 10001) / 100);
+                    purchases.Add((decimal)random.Next(1000, 10001) / 100);
                 }
 
                 //update the client purchases list
