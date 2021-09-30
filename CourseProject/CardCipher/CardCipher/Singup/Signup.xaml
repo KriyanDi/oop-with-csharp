@@ -21,7 +21,7 @@
         <Image Margin="428,20,24,0" Source="../Group 3.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" Width="92"/>
 
         <!--Exit Button-->
-        <Button x:Name="BtnExit" Height="24" Content="x" Margin="25,-115,470.4,0" FontSize="16" FontWeight="Medium" FontFamily="Tahoma" BorderBrush="Transparent" Background="Transparent" Padding="0 0 35 0"/>
+        <Button x:Name="BtnExit" Height="24" Content="x" Margin="25,-115,470.4,0" FontSize="16" FontWeight="Medium" FontFamily="Tahoma" BorderBrush="Transparent" Background="Transparent" Padding="0 0 35 0" Click="BtnExit_Click"/>
 
         <!--SignUp Text Box-->
         <TextBlock Text="Sign Up" FontFamily="Tahoma" FontSize="36" FontWeight="Medium" Foreground="White" Margin="60,0,0.4,0" Height="44">
@@ -82,7 +82,7 @@
                     <!--Password Input-->
                     <StackPanel Orientation="Vertical" Grid.Column="1" Margin="0 0 40 0">
                         <Border Background="White">
-                            <PasswordBox x:Name="TxtRegEmail1" Padding="3 0 0 0"/>
+                            <TextBox x:Name="TxtRegEmail1" Padding="3 0 0 0"/>
                         </Border>
                     </StackPanel>
                 </Grid>
@@ -132,7 +132,7 @@
                     <!--Email Input-->
                     <StackPanel Orientation="Vertical" Grid.Column="0" Margin="0 0 40 0">
                         <Border Background="White">
-                            <TextBox x:Name="TxtRegPass1" Foreground="Black" Padding="3 0 0 0"/>
+                            <PasswordBox x:Name="TxtRegPass1" Foreground="Black" Padding="3 0 0 0"/>
                         </Border>
                     </StackPanel>
 
