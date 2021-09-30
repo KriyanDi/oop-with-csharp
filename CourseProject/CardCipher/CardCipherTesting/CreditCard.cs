@@ -109,7 +109,6 @@ namespace CardCipherTesting
         }
         #endregion
 
-
         #region Methods
         public static bool IsCardNumberValid(string cardNumber)
         {
