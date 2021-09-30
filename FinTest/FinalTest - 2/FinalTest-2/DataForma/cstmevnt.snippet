@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>
+        Custom Event
+      </Title>
+      <Shortcut>
+        cstmevnt
+      </Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[ //$Name$ Event Arguments
+    public class $Name$EventArgs : EventArgs
+    {
+        propfull
+
+        public $Name$EventArgs()
+        {
+
+        }
+    }
+
+    //$Name$ Event Handler
+    public delegate void $Name$EventHandler(object o, $Name$EventArgs e);
+
+    //On$Event$ Event
+    public event $Name$EventHandler On$Event$; $end$]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>
+            Name
+          </ID>
+          <Default>Default</Default>
+          <ToolTip>
+            The name of your custom event
+          </ToolTip>
+        </Literal>
+        <Literal>
+          <ID>
+            Event
+          </ID>
+          <Default>Event</Default>
+          <ToolTip>
+            The name of the event
+          </ToolTip>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

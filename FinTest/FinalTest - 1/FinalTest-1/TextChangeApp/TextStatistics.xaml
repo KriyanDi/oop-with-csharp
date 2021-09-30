@@ -1,0 +1,45 @@
+﻿<Window x:Class="TextChangeApp.TextStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextChangeApp"
+        xmlns:TextChangeLib="clr-namespace:TextChangeLib;assembly=TextChangeLib"
+        mc:Ignorable="d"
+        Title="TextStatistics" Height="450" Width="800" Background="#eee">
+    <StackPanel Height="387" VerticalAlignment="Top" Margin="-9,0,0,-5">
+        <!--Cols-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Left Side-->
+            <Grid Grid.Column="0" RenderTransformOrigin="0.507,0.433">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--TextGenerator-->
+                <TextChangeLib:TextGenerator x:Name="TextGenerator" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="130" Grid.Row="0"/>
+
+                <!--Secondary controls-->
+                <StackPanel Orientation="Vertical" Margin="16 0 16 0" Grid.Row="2">
+                    <!--Sort By Frequancy Button-->
+                    <Button x:Name="BtnSrtFreq" Content="Sort By Frequancy" Margin="0 0 0 16" Click="BtnSrtFreq_Click"/>
+
+                    <!--Frequancy table-->
+                    <TextBlock x:Name="TxtFreqTable" Background="White" Height="200"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Codes-->
+            <StackPanel Orientation="Vertical" Grid.Column="1">
+                <Label Content="Codes:"/>
+                <TextBox x:Name="TxtCds" IsReadOnly="True" VerticalAlignment="Stretch" Background="White" Height="341" Margin="0,0,10,0" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Window>

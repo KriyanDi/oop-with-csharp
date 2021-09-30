@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileClient"
+        xmlns:DataForma="clr-namespace:DataForma;assembly=DataForma" xmlns:Test="clr-namespace:Test;assembly=Test" x:Class="FileClient.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="212" Width="500" Background="#eee" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Test:UserControl1 x:Name="UsrCntrl" HorizontalAlignment="Left" Height="155" Margin="10,10,0,0" VerticalAlignment="Top" Width="195" Grid.Column="0"/>
+        <TextBox x:Name="TxtDialog" BorderBrush="gray" BorderThickness="2" Grid.Column="1" Margin="10"/>
+    </Grid>
+</Window>
